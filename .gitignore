@@ -2,6 +2,8 @@ dist
 dist-*
 cabal-dev
 *.o
+*.nix
+result
 *.hi
 *.hie
 *.chi
