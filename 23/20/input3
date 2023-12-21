@@ -1,0 +1,9 @@
+broadcaster -> gs
+%gs -> vr, nn
+%vr -> jf
+&nn -> nj, gs, vr
+&nj -> lx
+%jf -> kl, nn
+%kl -> zd, nn
+%zd -> nn
+&lx -> rx

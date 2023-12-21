@@ -1,0 +1,1516 @@
+
+app/Main.hs:3:1: warning: [-Wunused-imports]
+    The import of ‘Data.Char’ is redundant
+      except perhaps to import instances from ‘Data.Char’
+    To import instances alone, use: import Data.Char()
+  |
+3 | import Data.Char
+  | ^^^^^^^^^^^^^^^^
+
+app/Main.hs:4:1: warning: [-Wunused-imports]
+    The import of ‘Data.Maybe’ is redundant
+      except perhaps to import instances from ‘Data.Maybe’
+    To import instances alone, use: import Data.Maybe()
+  |
+4 | import Data.Maybe
+  | ^^^^^^^^^^^^^^^^^
+
+app/Main.hs:5:1: warning: [-Wunused-imports]
+    The import of ‘Control.Monad’ is redundant
+      except perhaps to import instances from ‘Control.Monad’
+    To import instances alone, use: import Control.Monad()
+  |
+5 | import Control.Monad
+  | ^^^^^^^^^^^^^^^^^^^^
+
+app/Main.hs:6:1: warning: [-Wunused-imports]
+    The import of ‘Data.Tuple.Extra’ is redundant
+      except perhaps to import instances from ‘Data.Tuple.Extra’
+    To import instances alone, use: import Data.Tuple.Extra()
+  |
+6 | import Data.Tuple.Extra (fst3, snd3)
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+app/Main.hs:7:1: warning: [-Wunused-imports]
+    The import of ‘Data.List.Extra’ is redundant
+      except perhaps to import instances from ‘Data.List.Extra’
+    To import instances alone, use: import Data.List.Extra()
+  |
+7 | import Data.List.Extra (groupOn)
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+app/Main.hs:10:1: warning: [-Wunused-imports]
+    The qualified import of ‘Data.Vector’ is redundant
+      except perhaps to import instances from ‘Data.Vector’
+    To import instances alone, use: import Data.Vector()
+   |
+10 | import qualified Data.Vector as V
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+app/Main.hs:11:1: warning: [-Wunused-imports]
+    The import of ‘Data.Vector’ is redundant
+      except perhaps to import instances from ‘Data.Vector’
+    To import instances alone, use: import Data.Vector()
+   |
+11 | import Data.Vector ((!), (!?))
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+app/Main.hs:13:1: warning: [-Wunused-imports]
+    The qualified import of ‘Data.Set’ is redundant
+      except perhaps to import instances from ‘Data.Set’
+    To import instances alone, use: import Data.Set()
+   |
+13 | import qualified Data.Set as Set
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+app/Main.hs:14:1: warning: [-Wunused-imports]
+    The qualified import of ‘Safe’ is redundant
+      except perhaps to import instances from ‘Safe’
+    To import instances alone, use: import Safe()
+   |
+14 | import qualified Safe as S
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+app/Main.hs:15:1: warning: [-Wunused-imports]
+    The qualified import of ‘Safe.Exact’ is redundant
+      except perhaps to import instances from ‘Safe.Exact’
+    To import instances alone, use: import Safe.Exact()
+   |
+15 | import qualified Safe.Exact as S
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+app/Main.hs:17:1: warning: [-Wunused-imports]
+    The import of ‘Control.Monad.Trans.State.Strict’ is redundant
+      except perhaps to import instances from ‘Control.Monad.Trans.State.Strict’
+    To import instances alone, use: import Control.Monad.Trans.State.Strict()
+   |
+17 | import Control.Monad.Trans.State.Strict
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+app/Main.hs:18:1: warning: [-Wunused-imports]
+    The import of ‘Data.List.Utils’ is redundant
+      except perhaps to import instances from ‘Data.List.Utils’
+    To import instances alone, use: import Data.List.Utils()
+   |
+18 | import Data.List.Utils (dropWhileList)
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+app/Main.hs:19:1: warning: [-Wunused-imports]
+    The import of ‘Algorithm.Search’ is redundant
+      except perhaps to import instances from ‘Algorithm.Search’
+    To import instances alone, use: import Algorithm.Search()
+   |
+19 | import Algorithm.Search
+   | ^^^^^^^^^^^^^^^^^^^^^^^
+
+app/Main.hs:30:1: warning: [-Wmissing-signatures]
+    Top-level binding with no type signature:
+      solve :: [Char] -> Integer
+   |
+30 | solve i = foldl'
+   | ^^^^^
+
+app/Main.hs:32:34: warning: [-Wname-shadowing]
+    This binding for ‘b’ shadows the existing binding
+      bound at app/Main.hs:31:7
+   |
+32 |     ((\case "A" -> (\case Part a b c d -> a + b + c + d) b; _ -> 0)$
+   |                                  ^
+
+app/Main.hs:33:33: warning: [-Wname-shadowing]
+    This binding for ‘i’ shadows the existing binding
+      bound at app/Main.hs:30:7
+   |
+33 |      fst$head$dropWhile (\case (i,_) -> i /= "A" && i /= "R") $iterate (evalR b) ("in", parsedR M.! "in"))) 0 parsedP
+   |                                 ^
+
+app/Main.hs:33:63: warning: [-Woperator-whitespace-ext-conflict]
+    The prefix use of a ‘$’ would denote an untyped splice
+      were the TemplateHaskell extension enabled.
+    Suggested fix: Add whitespace after the ‘$’.
+   |
+33 |      fst$head$dropWhile (\case (i,_) -> i /= "A" && i /= "R") $iterate (evalR b) ("in", parsedR M.! "in"))) 0 parsedP
+   |                                                               ^
+
+app/Main.hs:36:5: warning: [-Wincomplete-patterns]
+    Pattern match(es) are non-exhaustive
+    In an equation for ‘evalR’:
+        Patterns of type ‘Part’, ‘(String, [Rl])’ not matched: _ (_, [])
+   |
+36 |     evalR p (_, Jump nm:rls) = (nm, parsedR M.! nm)
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+
+app/Main.hs:36:11: warning: [-Wunused-matches]
+    Defined but not used: ‘p’
+   |
+36 |     evalR p (_, Jump nm:rls) = (nm, parsedR M.! nm)
+   |           ^
+
+app/Main.hs:36:25: warning: [-Wunused-matches]
+    Defined but not used: ‘rls’
+   |
+36 |     evalR p (_, Jump nm:rls) = (nm, parsedR M.! nm)
+   |                         ^^^
+
+app/Main.hs:38:5: warning: [-Wincomplete-uni-patterns]
+    Pattern match(es) are non-exhaustive
+    In a pattern binding:
+        Patterns of type ‘[[String]]’ not matched:
+            []
+            [_]
+            (_:_:_:_)
+   |
+38 |     [rules,parts] = splitOn [""]$lines i
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+app/Main.hs:39:22: warning: [-Wincomplete-patterns]
+    Pattern match(es) are non-exhaustive
+    In a \case alternative:
+        Patterns of type ‘[Integer]’ not matched:
+            []
+            [_]
+            [_, _]
+            [_, _, _]
+            ...
+   |
+39 |     parsedP = fmap ((\case [x,m,a,s] -> Part x m a s).fmap (read @Integer .drop 2).splitOn ",".tail.init) parts
+   |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+app/Main.hs:42:1: warning: [-Wmissing-signatures]
+    Top-level binding with no type signature:
+      holds :: Part -> Char -> Char -> Integer -> Bool
+   |
+42 | holds (Part x m a s) 'x' = comp x
+   | ^^^^^
+
+app/Main.hs:42:1: warning: [-Wincomplete-patterns]
+    Pattern match(es) are non-exhaustive
+    In an equation for ‘holds’:
+        Patterns of type ‘Part’, ‘Char’ not matched:
+            (Part _ _ _ _) p where p is not one of {'s', 'a', 'x', ...}
+   |
+42 | holds (Part x m a s) 'x' = comp x
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+
+app/Main.hs:42:15: warning: [-Wunused-matches]
+    Defined but not used: ‘m’
+   |
+42 | holds (Part x m a s) 'x' = comp x
+   |               ^
+
+app/Main.hs:42:17: warning: [-Wunused-matches]
+    Defined but not used: ‘a’
+   |
+42 | holds (Part x m a s) 'x' = comp x
+   |                 ^
+
+app/Main.hs:42:19: warning: [-Wunused-matches]
+    Defined but not used: ‘s’
+   |
+42 | holds (Part x m a s) 'x' = comp x
+   |                   ^
+
+app/Main.hs:43:13: warning: [-Wunused-matches]
+    Defined but not used: ‘x’
+   |
+43 | holds (Part x m a s) 'm' = comp m
+   |             ^
+
+app/Main.hs:43:17: warning: [-Wunused-matches]
+    Defined but not used: ‘a’
+   |
+43 | holds (Part x m a s) 'm' = comp m
+   |                 ^
+
+app/Main.hs:43:19: warning: [-Wunused-matches]
+    Defined but not used: ‘s’
+   |
+43 | holds (Part x m a s) 'm' = comp m
+   |                   ^
+
+app/Main.hs:44:13: warning: [-Wunused-matches]
+    Defined but not used: ‘x’
+   |
+44 | holds (Part x m a s) 'a' = comp a
+   |             ^
+
+app/Main.hs:44:15: warning: [-Wunused-matches]
+    Defined but not used: ‘m’
+   |
+44 | holds (Part x m a s) 'a' = comp a
+   |               ^
+
+app/Main.hs:44:19: warning: [-Wunused-matches]
+    Defined but not used: ‘s’
+   |
+44 | holds (Part x m a s) 'a' = comp a
+   |                   ^
+
+app/Main.hs:45:13: warning: [-Wunused-matches]
+    Defined but not used: ‘x’
+   |
+45 | holds (Part x m a s) 's' = comp s
+   |             ^
+
+app/Main.hs:45:15: warning: [-Wunused-matches]
+    Defined but not used: ‘m’
+   |
+45 | holds (Part x m a s) 's' = comp s
+   |               ^
+
+app/Main.hs:45:17: warning: [-Wunused-matches]
+    Defined but not used: ‘a’
+   |
+45 | holds (Part x m a s) 's' = comp s
+   |                 ^
+
+app/Main.hs:46:1: warning: [-Wmissing-signatures]
+    Top-level binding with no type signature:
+      comp :: Ord a => a -> Char -> a -> Bool
+   |
+46 | comp n1 '<' n2 = n1 < n2
+   | ^^^^
+
+app/Main.hs:46:1: warning: [-Wincomplete-patterns]
+    Pattern match(es) are non-exhaustive
+    In an equation for ‘comp’:
+        Patterns of type ‘a’, ‘Char’, ‘a’ not matched:
+            _ p _ where p is not one of {'<', '>'}
+   |
+46 | comp n1 '<' n2 = n1 < n2
+   | ^^^^^^^^^^^^^^^^^^^^^^^^...
+
+app/Main.hs:49:1: warning: [-Wmissing-signatures]
+    Top-level binding with no type signature:
+      toR :: [Char] -> ([Char], [Rl])
+   |
+49 | toR r = (nm, pRls)
+   | ^^^
+
+app/Main.hs:54:1: warning: [-Wmissing-signatures]
+    Top-level binding with no type signature: pR :: [Char] -> Rl
+   |
+54 | pR str@(i:x:s)
+   | ^^
+
+app/Main.hs:54:1: warning: [-Wincomplete-patterns]
+    Pattern match(es) are non-exhaustive
+    In an equation for ‘pR’: Patterns of type ‘[Char]’ not matched: []
+   |
+54 | pR str@(i:x:s)
+   | ^^^^^^^^^^^^^^...
+
+app/Main.hs:55:28: warning: [-Wincomplete-patterns]
+    Pattern match(es) are non-exhaustive
+    In a case alternative:
+        Patterns of type ‘[[Char]]’ not matched:
+            []
+            [_]
+            (_:_:_:_)
+   |
+55 |   | x == '<' || x == '>' = case splitOn ":" s of [n,jmp] -> Cond i x (read @Integer n) jmp
+   |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+app/Main.hs:62:1: warning: [-Wmissing-signatures]
+    Top-level binding with no type signature:
+      solveH :: [Char] -> Integer
+   |
+62 | solveH i = numberValid (Interval (1,4000) (1,4000) (1,4000) (1,4000)) "in" (parsedR M.! "in")
+   | ^^^^^^
+
+app/Main.hs:64:5: warning: [-Wincomplete-uni-patterns]
+    Pattern match(es) are non-exhaustive
+    In a pattern binding:
+        Patterns of type ‘[[String]]’ not matched:
+            []
+            [_]
+            (_:_:_:_)
+   |
+64 |     [rules,parts] = splitOn [""]$lines i
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+app/Main.hs:64:12: warning: [-Wunused-local-binds]
+    Defined but not used: ‘parts’
+   |
+64 |     [rules,parts] = splitOn [""]$lines i
+   |            ^^^^^
+
+app/Main.hs:68:22: warning: [-Wunused-matches]
+    Defined but not used: ‘nm’
+   |
+68 |     numberValid intv nm (Jump s:xs) = numberValid intv s (parsedR M.! s)
+   |                      ^^
+
+app/Main.hs:68:33: warning: [-Wunused-matches]
+    Defined but not used: ‘xs’
+   |
+68 |     numberValid intv nm (Jump s:xs) = numberValid intv s (parsedR M.! s)
+   |                                 ^^
+
+app/Main.hs:71:9: warning: [-Wincomplete-patterns]
+    Pattern match(es) are non-exhaustive
+    In an equation for ‘setup’:
+        Patterns of type ‘[Rl]’, ‘Bool’ not matched:
+            [] _
+            [] _
+            [] _
+            [] _
+            ...
+   |
+71 |         setup (Cond i op n jmp:_) True = numberValid (updateIntv i (newIntv op n) intv) jmp (parsedR M.! jmp)
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+
+app/Main.hs:71:21: warning: [-Wname-shadowing]
+    This binding for ‘i’ shadows the existing binding
+      bound at app/Main.hs:62:8
+   |
+71 |         setup (Cond i op n jmp:_) True = numberValid (updateIntv i (newIntv op n) intv) jmp (parsedR M.! jmp)
+   |                     ^
+
+app/Main.hs:72:21: warning: [-Wname-shadowing]
+    This binding for ‘i’ shadows the existing binding
+      bound at app/Main.hs:62:8
+   |
+72 |         setup (Cond i '<' n jmp:xs) False = numberValid (updateIntv i (newIntv '>' (n-1)) intv) nm xs
+   |                     ^
+
+app/Main.hs:72:29: warning: [-Wunused-matches]
+    Defined but not used: ‘jmp’
+   |
+72 |         setup (Cond i '<' n jmp:xs) False = numberValid (updateIntv i (newIntv '>' (n-1)) intv) nm xs
+   |                             ^^^
+
+app/Main.hs:73:21: warning: [-Wname-shadowing]
+    This binding for ‘i’ shadows the existing binding
+      bound at app/Main.hs:62:8
+   |
+73 |         setup (Cond i '>' n jmp:xs) False = numberValid (updateIntv i (newIntv '<' (n+1)) intv) nm xs
+   |                     ^
+
+app/Main.hs:73:29: warning: [-Wunused-matches]
+    Defined but not used: ‘jmp’
+   |
+73 |         setup (Cond i '>' n jmp:xs) False = numberValid (updateIntv i (newIntv '<' (n+1)) intv) nm xs
+   |                             ^^^
+
+app/Main.hs:77:1: warning: [-Wmissing-signatures]
+    Top-level binding with no type signature:
+      newIntv :: (Ord a, Num a) => Char -> a -> (a, a) -> (a, a)
+   |
+77 | newIntv '<' n (a,b) = if n > a && a > 0 then (a,min (n-1) b)  else (-1,-2)
+   | ^^^^^^^
+
+app/Main.hs:77:1: warning: [-Wincomplete-patterns]
+    Pattern match(es) are non-exhaustive
+    In an equation for ‘newIntv’:
+        Patterns of type ‘Char’, ‘a’, ‘(a, a)’ not matched:
+            p _ _ where p is not one of {'<', '>'}
+   |
+77 | newIntv '<' n (a,b) = if n > a && a > 0 then (a,min (n-1) b)  else (-1,-2)
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+
+app/Main.hs:80:1: warning: [-Wmissing-signatures]
+    Top-level binding with no type signature:
+      updateIntv :: Char
+                    -> ((Integer, Integer) -> (Integer, Integer))
+                    -> Interval
+                    -> Interval
+   |
+80 | updateIntv 'x' f (Interval x m a s) = Interval (f x) m a s
+   | ^^^^^^^^^^
+
+app/Main.hs:80:1: warning: [-Wincomplete-patterns]
+    Pattern match(es) are non-exhaustive
+    In an equation for ‘updateIntv’:
+        Patterns of type ‘Char’,
+                         ‘(Integer, Integer) -> (Integer, Integer)’, ‘Interval’ not matched:
+            p _ _ where p is not one of {'s', 'a', 'x', ...}
+   |
+80 | updateIntv 'x' f (Interval x m a s) = Interval (f x) m a s
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+Interval (1,4000) (1,1846) (3298,3527) (3291,4000)
+1205807200000
+Interval (1,4000) (1,1846) (3599,3651) (3291,4000)
+277859920000
+Interval (2494,4000) (1,1846) (3652,4000) (3291,3736)
+433017286988
+Interval (1,1496) (1,1846) (3652,4000) (3291,3736)
+429856576864
+Interval (1,4000) (1847,4000) (3298,4000) (3291,3489)
+1205352552000
+Interval (1,1577) (1847,4000) (3298,4000) (3816,4000)
+441778367190
+Interval (1578,2618) (1847,4000) (3298,4000) (3816,4000)
+291624147270
+Interval (2619,4000) (2639,4000) (3298,4000) (3905,4000)
+127031582592
+Interval (2619,4000) (1847,3109) (3598,4000) (3816,3904)
+62604629022
+Interval (1,4000) (1847,4000) (3298,4000) (3766,3815)
+302852400000
+Interval (1,636) (1,1627) (2168,3297) (3291,4000)
+830197575600
+Interval (1546,4000) (1,4000) (2168,3297) (3857,3949)
+1031983800000
+Interval (1546,2830) (1,4000) (2168,3297) (3950,3969)
+116164000000
+Interval (1546,2574) (1,4000) (2168,3297) (3744,3809)
+306971280000
+Interval (1546,4000) (1,4000) (2168,3297) (3810,3839)
+332898000000
+Interval (2865,4000) (1800,4000) (2168,3297) (3840,3856)
+48031454560
+Interval (3464,4000) (1,1799) (2168,3297) (3840,3856)
+18558070230
+Interval (1,1449) (1597,2224) (2762,3075) (2341,2741)
+114578214408
+Interval (1,1449) (1,935) (2168,2770) (2341,2741)
+327598331445
+Interval (834,1449) (1,935) (2771,3075) (2341,2741)
+70442787800
+Interval (1403,4000) (1,2224) (2168,3075) (2742,3290)
+2880262848384
+Interval (1,1402) (1,2224) (2168,3075) (2742,2938)
+557743954048
+Interval (1,1402) (960,2224) (2534,3075) (2939,3290)
+338361147520
+Interval (1,1402) (420,959) (2168,3075) (2939,3126)
+129236584320
+Interval (1,1402) (1,419) (2168,3075) (2939,3126)
+100278016352
+Interval (1,4000) (2225,3072) (2168,2475) (2341,3290)
+992499200000
+Interval (2074,4000) (2225,4000) (2476,3075) (2449,2558)
+225875232000
+Interval (1,4000) (2225,4000) (2476,2753) (2559,2764)
+406831872000
+Interval (1,2308) (2225,4000) (2476,2753) (2765,2924)
+182323875840
+Interval (2309,4000) (2225,3172) (2476,2753) (2765,2924)
+71346631680
+Interval (2309,4000) (3173,4000) (2476,2753) (2765,2924)
+62315412480
+Interval (1,4000) (3402,3677) (2476,3075) (2925,3100)
+116582400000
+Interval (1,4000) (2225,3401) (2476,3075) (2925,2985)
+172312800000
+Interval (1,4000) (1,2343) (3405,3745) (2341,3290)
+3036059400000
+Interval (1,1875) (3398,4000) (3405,4000) (2341,3290)
+640159875000
+Interval (1,1875) (2344,3397) (3405,3666) (2341,2870)
+274422075000
+Interval (1,1875) (2344,3397) (3667,4000) (2341,2870)
+349835775000
+Interval (1876,3080) (2344,4000) (3667,4000) (2341,3290)
+633548150500
+Interval (3574,4000) (2344,4000) (3667,3818) (2341,3290)
+102168631600
+Interval (3574,4000) (2344,4000) (3819,3888) (2966,3290)
+16096512250
+Interval (1876,4000) (2344,3447) (3405,3666) (2341,3290)
+583919400000
+Interval (1876,4000) (3448,4000) (3405,3505) (2341,3290)
+112753243750
+Interval (1876,4000) (3448,4000) (3506,3666) (2341,3290)
+179735368750
+Interval (1,1954) (1,1725) (3076,3404) (2896,3290)
+438032820750
+Interval (1955,2826) (1,1725) (3076,3404) (3067,3290)
+110853523200
+Interval (1955,2826) (1,1725) (3076,3404) (2896,3066)
+84624787800
+Interval (1,2423) (1,1085) (3076,3252) (2341,2895)
+258255394425
+Interval (2424,2983) (1,1725) (3076,3252) (2666,2895)
+39325860000
+Interval (2984,4000) (1,600) (3076,3252) (2666,2895)
+24841242000
+Interval (1,4000) (1,695) (3253,3404) (2645,2732)
+37185280000
+Interval (1,4000) (1,327) (3253,3404) (2341,2644)
+60440064000
+Interval (1,4000) (328,695) (3348,3404) (2515,2644)
+10907520000
+Interval (1,4000) (328,506) (3253,3347) (2515,2592)
+5305560000
+Interval (1,4000) (1300,1725) (3253,3343) (2615,2895)
+43572984000
+Interval (1,4000) (1577,1725) (3253,3343) (2341,2614)
+14860664000
+Interval (1,4000) (1300,1576) (3253,3343) (2341,2614)
+27626872000
+Interval (1,4000) (696,1299) (3253,3404) (2341,2895)
+203813760000
+Interval (2552,3141) (2281,4000) (2168,4000) (842,1352)
+950525612400
+Interval (2686,2905) (1,2280) (2168,4000) (842,2340)
+1378229767200
+Interval (2616,2685) (1,2280) (2168,4000) (842,2340)
+438527653200
+Interval (2906,3141) (1,2280) (2168,4000) (842,2340)
+1478464659360
+Interval (2718,2810) (1,2530) (2168,4000) (1,841)
+362712005370
+Interval (2769,2810) (2531,4000) (2168,4000) (1,841)
+95175482220
+Interval (2718,2768) (2531,3253) (3300,4000) (1,841)
+21738145293
+Interval (2718,2768) (3254,4000) (3300,4000) (1,841)
+22459743477
+Interval (2811,3141) (2598,4000) (2168,2882) (1,841)
+279246476795
+Interval (2811,3141) (1,1085) (2168,2882) (1,841)
+215953262525
+Interval (2811,3141) (1086,2597) (2168,2642) (1,841)
+199926052200
+Interval (2811,3141) (1086,2597) (2643,2882) (1,841)
+101015268480
+Interval (2969,3036) (1,4000) (2883,3434) (1,841)
+126271104000
+Interval (2811,2968) (1,1352) (3872,3942) (1,841)
+12755224976
+Interval (2905,2968) (1353,2778) (2883,4000) (1,841)
+85809880832
+Interval (2843,2904) (1353,4000) (2883,3523) (1,841)
+88504162256
+Interval (2843,2904) (1353,4000) (3524,4000) (1,417)
+32656083984
+Interval (2843,2904) (1353,2680) (3524,4000) (418,841)
+16652291328
+Interval (3142,3602) (1,4000) (3841,4000) (1,2340)
+690393600000
+Interval (3603,4000) (1,4000) (3841,4000) (1,2340)
+596044800000
+Interval (3142,3492) (2033,4000) (3591,3840) (282,540)
+44727228000
+Interval (3493,3561) (1,1869) (3591,3752) (1,2340)
+48886535880
+Interval (3667,3815) (1,1869) (3591,3840) (1146,2340)
+83196198750
+Interval (3816,4000) (636,1869) (3754,3840) (1146,2340)
+23734169850
+Interval (3493,4000) (1870,4000) (3749,3840) (495,1208)
+71110413024
+Interval (3493,4000) (1870,2651) (3749,3840) (1,494)
+18054490688
+Interval (3493,3703) (1870,4000) (3651,3748) (1,2340)
+103111674120
+Interval (3450,4000) (2770,4000) (2940,3590) (1,2340)
+1033252578540
+Interval (3450,4000) (2109,2769) (2940,3590) (1,2340)
+554817184740
+Interval (3759,3839) (1134,2108) (2940,3590) (1,2340)
+120305776500
+Interval (3840,3890) (1134,2108) (2940,3590) (1,2340)
+75748081500
+Interval (3450,3758) (837,2108) (2940,3365) (1,2340)
+391805968320
+Interval (3450,3637) (837,2108) (3366,3590) (1,2340)
+125905104000
+Interval (3260,3449) (1,4000) (2940,3590) (1266,2340)
+531867000000
+Interval (3142,3259) (1,4000) (2940,3590) (1266,2340)
+330317400000
+Interval (3142,3449) (1,4000) (3195,3590) (886,1265)
+185391360000
+Interval (3142,3449) (1,4000) (2940,3194) (886,1265)
+119380800000
+Interval (3142,3449) (1,1832) (2940,3590) (592,885)
+107995212864
+Interval (3142,3449) (1833,4000) (2940,3267) (592,731)
+30662804480
+Interval (3142,3449) (2644,4000) (2940,3323) (1,591)
+94852606464
+Interval (3142,3449) (3317,4000) (3324,3590) (1,591)
+33243409584
+Interval (3142,3449) (2644,3316) (3324,3590) (353,591)
+13227413892
+Interval (3142,3449) (1,2643) (3232,3590) (1,591)
+172714901436
+Interval (3271,3449) (1,2643) (3043,3231) (1,591)
+52844461803
+Interval (3271,3449) (1,2643) (2940,3042) (206,591)
+18809390526
+Interval (3271,3449) (1,2643) (2940,3042) (1,205)
+9989443155
+Interval (3142,4000) (1,1602) (2382,2657) (870,1388)
+197120646792
+Interval (3142,4000) (1,1602) (2168,2381) (870,1388)
+152839921788
+Interval (3142,4000) (1059,1602) (2168,2939) (545,869)
+117244566400
+Interval (3142,3498) (1,1602) (2168,2939) (1,544)
+240185578752
+Interval (3499,4000) (1,1602) (2168,2939) (1,544)
+337739945472
+Interval (3686,4000) (1,1602) (2168,2939) (1389,1533)
+56488282200
+Interval (3686,4000) (1,1602) (2168,2455) (1534,1801)
+38949361920
+Interval (3142,3685) (202,326) (2168,2448) (1958,2340)
+7318364000
+Interval (3340,3685) (128,201) (2168,2448) (1958,2340)
+2755579292
+Interval (3142,3685) (1,693) (2449,2939) (1578,1682)
+19435822560
+Interval (3142,3685) (694,1602) (2449,2939) (1578,1682)
+25493741280
+Interval (3142,3501) (1,1602) (2449,2939) (1488,1577)
+25485256800
+Interval (3142,3304) (675,1602) (2449,2939) (1389,1487)
+7352791776
+Interval (3502,3685) (1,1602) (2449,2939) (1389,1577)
+27354175632
+Interval (3142,3567) (2512,4000) (2542,2621) (1,2340)
+118743580800
+Interval (3568,4000) (2512,3295) (2542,2621) (1,2340)
+63549158400
+Interval (3142,3635) (1603,2511) (2542,2674) (1,2340)
+139752096120
+Interval (3142,4000) (1603,1928) (2849,2939) (1865,2340)
+12129952744
+Interval (3142,4000) (1603,4000) (2675,2939) (1561,1864)
+165944093920
+Interval (3142,4000) (1603,2479) (2168,2389) (1150,2340)
+199185395886
+Interval (3142,3495) (1603,4000) (2168,2389) (1,1149)
+216533673576
+Interval (3142,4000) (1603,2435) (2390,2541) (291,567)
+30127390888
+Interval (3142,4000) (2436,4000) (2390,2541) (291,567)
+56601880840
+Interval (3142,3602) (2417,4000) (2390,2461) (568,1269)
+36908441856
+Interval (3505,4000) (2121,2463) (2462,2541) (568,1269)
+9554388480
+Interval (3505,4000) (1603,2120) (2462,2541) (568,1269)
+14429076480
+Interval (3866,4000) (1603,2576) (2390,2541) (1270,2340)
+21405520080
+Interval (3615,3865) (1603,2576) (2461,2541) (1270,2340)
+21208363974
+Interval (3142,3614) (2062,2576) (2390,2541) (1270,2340)
+39655317240
+Interval (3142,3614) (1883,2061) (2390,2541) (1270,2340)
+13783110264
+Interval (3142,3614) (1603,1882) (2390,2475) (1270,2340)
+12198518640
+Interval (3142,3614) (1603,1882) (2476,2541) (1270,2340)
+9361653840
+Interval (3142,4000) (2577,4000) (2390,2541) (1270,1714)
+82738330240
+Interval (3142,4000) (2577,4000) (2390,2541) (1715,2340)
+116391448832
+Interval (903,1866) (1,4000) (3687,4000) (1486,2340)
+1035220320000
+Interval (1867,2551) (1,4000) (3198,4000) (1486,2340)
+1881188100000
+Interval (1,486) (1,4000) (3690,4000) (1486,2340)
+516919320000
+Interval (1,486) (1,4000) (3198,3474) (1486,2340)
+460407240000
+Interval (1,292) (1,4000) (3475,3689) (1486,1970)
+121793200000
+Interval (293,486) (1,4000) (3475,3689) (1486,1776)
+48550440000
+Interval (1,486) (1,4000) (3475,3689) (1971,2340)
+154645200000
+Interval (487,902) (1172,2542) (3198,3582) (1812,2340)
+116157481440
+Interval (487,902) (1,1171) (3198,3582) (2048,2340)
+54951376480
+Interval (487,902) (1,1171) (3198,3582) (1812,2047)
+44261176960
+Interval (487,902) (1,4000) (3393,3630) (1486,1811)
+129106432000
+Interval (487,902) (1,4000) (3269,3392) (1486,1811)
+67265536000
+Interval (487,644) (1,4000) (3198,3268) (1486,1811)
+14628272000
+Interval (487,902) (1,4000) (3631,4000) (1486,1811)
+200711680000
+Interval (1,1459) (1,4000) (3198,3613) (1262,1485)
+543821824000
+Interval (1460,2551) (1,4000) (3198,3613) (1262,1485)
+407027712000
+Interval (1615,2551) (1,4000) (3198,3613) (1051,1261)
+328984448000
+Interval (1015,2551) (1,946) (3614,4000) (1051,1485)
+244773966690
+Interval (1,2551) (947,1485) (3799,4000) (1276,1485)
+58327033380
+Interval (1,2551) (947,1485) (3614,3798) (1276,1485)
+53418322650
+Interval (1,2551) (1828,4000) (3914,4000) (1051,1485)
+209787058935
+Interval (1,2551) (1828,4000) (3873,3913) (1051,1485)
+98865165705
+Interval (1,2551) (1,2445) (2168,3197) (1372,1723)
+2261357419200
+Interval (1,2551) (2446,4000) (2168,2665) (1372,1723)
+695365049280
+Interval (1,2551) (2446,4000) (2952,3197) (1372,1723)
+343493578560
+Interval (1,2551) (1,4000) (2168,3197) (1128,1144)
+178672040000
+Interval (1,2551) (1,4000) (2797,3197) (1194,1278)
+347803340000
+Interval (1,2551) (1,4000) (3063,3143) (1279,1371)
+76866732000
+Interval (1,2551) (1,4000) (3144,3197) (1279,1371)
+51244488000
+Interval (888,2551) (2346,4000) (2797,2893) (1279,1371)
+24843112320
+Interval (1,2551) (1,2345) (2797,3062) (1279,1371)
+147985066110
+Interval (532,1453) (1,4000) (2168,2796) (1194,1371)
+412915856000
+Interval (1,317) (1,2631) (2168,2796) (1194,1371)
+93379330974
+Interval (1454,2551) (1,4000) (2168,2439) (1194,1371)
+212643072000
+Interval (1,2551) (2588,4000) (2970,3197) (1724,1942)
+179983039716
+Interval (1,2551) (3310,4000) (2168,2684) (1724,1942)
+199582824243
+Interval (1,2551) (2588,3309) (2168,2684) (1724,1942)
+208536612306
+Interval (1028,2551) (3068,4000) (2168,3197) (1943,2138)
+287051556960
+Interval (1,1027) (3068,4000) (2168,3197) (1943,2138)
+193439599080
+Interval (1,1303) (3279,3393) (2168,3197) (2139,2340)
+31176750700
+Interval (1,2551) (2588,3067) (2971,3197) (1943,2340)
+110626870080
+Interval (1,2551) (2762,3067) (2168,2239) (1943,2340)
+22369045536
+Interval (1,2551) (2588,2761) (2168,2554) (1943,2145)
+34871185314
+Interval (1,2551) (2588,2761) (2168,2554) (2146,2234)
+15288352182
+Interval (1,2551) (2627,2701) (2168,2554) (2235,2340)
+7848534150
+Interval (1415,2551) (1,2587) (2168,3197) (2031,2340)
+939195086700
+Interval (1,1414) (1,2587) (2168,3197) (2031,2145)
+433292232100
+Interval (1,1414) (1,2587) (2168,3197) (2146,2340)
+734712915300
+Interval (1,1539) (1,2587) (2168,2415) (1724,2030)
+303127337448
+Interval (1,775) (1332,2587) (2416,2575) (1724,2030)
+47813408000
+Interval (1,775) (1,1331) (2416,2575) (1724,2030)
+50668508000
+Interval (1540,2551) (1079,2587) (2168,2431) (1724,2030)
+123769049184
+Interval (1540,2551) (1,2587) (2432,2575) (1724,2030)
+115738489152
+Interval (870,1333) (1,1777) (3699,4000) (1,1050)
+261457828800
+Interval (870,1333) (1,1777) (3326,3698) (1,1050)
+322926391200
+Interval (1334,1733) (1,1777) (2168,4000) (1,1050)
+1368041220000
+Interval (1734,2181) (1,1777) (2168,2495) (1,1050)
+274175462400
+Interval (2182,2551) (1,1777) (2168,2495) (390,1050)
+142549091920
+Interval (1734,2551) (1,1777) (2496,2962) (1,1050)
+712765895100
+Interval (171,447) (1376,1777) (2168,2605) (1,1050)
+51211704600
+Interval (313,447) (1376,1777) (2606,3375) (1,1050)
+43877295000
+Interval (171,312) (1376,1777) (2606,3375) (1,1050)
+46152414000
+Interval (171,447) (467,942) (2168,3375) (1,1050)
+167241076800
+Interval (171,447) (1,466) (2168,2796) (1,1050)
+85252206900
+Interval (173,447) (1,1063) (3376,4000) (1,1050)
+191838281250
+Interval (1,172) (1,1777) (3376,4000) (636,1050)
+79276412500
+Interval (1,172) (1,1777) (3376,3759) (1,635)
+74528232960
+Interval (104,172) (1,1777) (3760,3870) (1,635)
+8642377305
+Interval (685,732) (1,1777) (2168,4000) (1,410)
+64102502880
+Interval (685,776) (1,1777) (2168,4000) (741,1050)
+92896513320
+Interval (777,869) (969,1777) (2168,4000) (1,1050)
+144804892050
+Interval (777,821) (1,968) (2168,4000) (1,1050)
+83837754000
+Interval (822,869) (1,355) (2168,2944) (411,1050)
+8473651200
+Interval (822,869) (356,968) (2168,2737) (1,1050)
+17610264000
+Interval (448,593) (1,1777) (2168,2787) (411,1050)
+102946585600
+Interval (448,593) (1,1777) (2168,2787) (1,167)
+26862624680
+Interval (594,684) (1,1777) (2168,2562) (638,1050)
+26380071445
+Interval (594,632) (1,1777) (2563,2787) (1,1050)
+16372833750
+Interval (662,684) (1,1777) (2696,2787) (1,1050)
+3948138600
+Interval (662,684) (1,1777) (2563,2608) (1,1050)
+1974069300
+Interval (448,565) (1,1777) (2788,4000) (375,1050)
+171940003768
+Interval (566,684) (1,1777) (2788,4000) (1,467)
+119787657073
+Interval (1,1200) (1778,4000) (3205,4000) (1,611)
+1297403265600
+Interval (1201,2551) (1778,4000) (3205,4000) (1,298)
+712400381784
+Interval (1,2551) (1778,2564) (3205,4000) (824,865)
+67119320184
+Interval (1,2551) (1778,2564) (3205,4000) (770,823)
+86296268808
+Interval (1,2551) (1778,2564) (3205,4000) (713,769)
+91090505964
+Interval (1,2551) (1778,2564) (3205,4000) (612,712)
+161405984252
+Interval (1,1676) (3281,4000) (3633,4000) (612,865)
+112794531840
+Interval (1978,2551) (3281,4000) (3205,4000) (612,776)
+54280195200
+Interval (1677,1977) (3547,4000) (3205,4000) (612,776)
+17948136360
+Interval (1677,2551) (3281,4000) (3205,4000) (777,1050)
+137405520000
+Interval (1,2551) (2817,3280) (3205,4000) (898,1050)
+144156071232
+Interval (1,892) (1778,4000) (2981,3204) (1,684)
+303814457856
+Interval (1,892) (1778,4000) (2981,3112) (685,1050)
+95798637792
+Interval (557,892) (1778,2575) (2356,2699) (371,1050)
+62720501760
+Interval (1,556) (1778,2575) (2513,2699) (371,1050)
+56419366080
+Interval (1,556) (1778,2575) (2356,2512) (371,1050)
+47368130880
+Interval (1,892) (1778,2679) (2321,2355) (371,1050)
+19149099200
+Interval (1,892) (2680,4000) (2321,2355) (371,1050)
+28044301600
+Interval (432,892) (1778,4000) (2266,2320) (371,1050)
+38327632200
+Interval (1,431) (1778,2631) (2266,2320) (371,1050)
+13765967600
+Interval (1,892) (1778,3145) (2168,2699) (1,149)
+96727252608
+Interval (893,2551) (2283,2823) (2168,3204) (1,662)
+616141408386
+Interval (1471,2551) (2824,4000) (2851,3204) (1,331)
+149084815638
+Interval (893,1470) (2824,3329) (2851,3204) (1,331)
+34269645432
+Interval (1,781) (686,1507) (1,2167) (1082,2232)
+1601242418094
+Interval (1,397) (1,685) (1,2167) (1082,2232)
+678289842065
+Interval (398,781) (325,685) (1,2167) (1082,2232)
+345758337408
+Interval (1,781) (1508,2670) (1,2167) (1082,2232)
+2265504783751
+Interval (1,781) (2671,4000) (1,1025) (1082,2232)
+1225467685750
+Interval (362,781) (2671,4000) (1686,2167) (1082,2232)
+309901225200
+Interval (362,543) (2671,4000) (1026,1685) (1082,2232)
+183883299600
+Interval (1,315) (1,4000) (1243,2167) (1,1081)
+1259905500000
+Interval (505,781) (1,4000) (1,1242) (436,1081)
+888983856000
+Interval (1,781) (1,4000) (1,1242) (1,199)
+772121592000
+Interval (1,337) (1,4000) (1,562) (200,435)
+178787936000
+Interval (149,337) (1,4000) (563,1242) (347,435)
+45753120000
+Interval (338,781) (1,4000) (1,444) (200,435)
+186096384000
+Interval (338,781) (1,4000) (445,883) (200,435)
+184000704000
+Interval (1173,1489) (1,4000) (558,982) (995,2232)
+667158200000
+Interval (782,1131) (1,2413) (983,2167) (995,2232)
+1238980186500
+Interval (1280,1489) (1,2413) (983,1572) (995,2232)
+370125726600
+Interval (782,1489) (3178,4000) (983,2167) (995,1650)
+452955234240
+Interval (962,1071) (1,4000) (1,2167) (370,994)
+595925000000
+Interval (1072,1294) (2306,4000) (1,958) (1,994)
+359936972220
+Interval (1072,1294) (2306,4000) (959,2167) (449,994)
+249513190290
+Interval (1072,1294) (2306,4000) (959,2167) (1,448)
+204728771520
+Interval (1422,1489) (1,1270) (1,1162) (1,994)
+99748218080
+Interval (1462,1489) (1271,2421) (1,1162) (1,994)
+37224242384
+Interval (1295,1421) (1,4000) (1,444) (1,994)
+224198688000
+Interval (1295,1421) (1,4000) (445,1162) (410,994)
+213375240000
+Interval (1372,1421) (1,4000) (445,1162) (1,409)
+58732400000
+Interval (1295,1413) (1,4000) (1549,2167) (1,994)
+292876136000
+Interval (1295,1489) (1,1801) (1163,1396) (1,425)
+34926342750
+Interval (1295,1489) (1,1801) (1163,1396) (426,994)
+46760209470
+Interval (1295,1489) (1,4000) (1397,1548) (650,994)
+40903200000
+Interval (1295,1419) (1,4000) (1397,1548) (1,649)
+49324000000
+Interval (1420,1489) (1,4000) (1397,1548) (1,649)
+27621440000
+Interval (1,1489) (403,1051) (1,2167) (2865,3040)
+368562354512
+Interval (1,506) (1,402) (1,2167) (3604,4000)
+174995140188
+Interval (507,1489) (1,402) (1,2167) (3604,4000)
+339960914634
+Interval (1,1489) (1052,1761) (1,2167) (3325,3700)
+861389954480
+Interval (1,1489) (1052,1414) (1,758) (2865,3324)
+188463980760
+Interval (945,1489) (1102,1438) (1,2167) (2233,2589)
+142086733635
+Interval (1216,1489) (1,1101) (1,2167) (2233,2589)
+233380738206
+Interval (1,944) (1,1761) (1,331) (2233,2589)
+196438930128
+Interval (1,340) (701,1761) (1721,2167) (2437,2589)
+24671369340
+Interval (1,340) (327,700) (1721,2167) (2437,2589)
+8696599560
+Interval (1,340) (1,326) (1721,2167) (2499,2589)
+4508638680
+Interval (164,340) (1,326) (1721,2167) (2437,2498)
+1599153228
+Interval (731,944) (573,1157) (856,2167) (2233,2387)
+25458638400
+Interval (341,944) (1158,1761) (856,2167) (2233,2589)
+170873977344
+Interval (1241,1489) (842,1761) (1,2167) (2716,2864)
+73966037640
+Interval (909,1040) (842,1761) (1,2167) (2716,2864)
+39210911520
+Interval (1041,1240) (842,1761) (1,2167) (2716,2791)
+30303328000
+Interval (1041,1240) (842,1761) (1,2167) (2792,2864)
+29107144000
+Interval (909,1223) (1,841) (842,2167) (2590,2864)
+96601254750
+Interval (1,908) (822,1761) (1,1179) (2590,2864)
+276732522000
+Interval (1,232) (426,821) (1,2167) (2590,2864)
+54748821600
+Interval (233,534) (426,821) (1,2167) (2711,2864)
+39910003056
+Interval (233,534) (426,821) (1,2167) (2652,2710)
+15290195976
+Interval (1,534) (1,425) (1,2167) (2590,2769)
+88524117000
+Interval (1,534) (231,425) (1350,2167) (2770,2864)
+8091942300
+Interval (617,708) (371,821) (1,2167) (2590,2864)
+24726120100
+Interval (657,708) (1,370) (1,2167) (2590,2864)
+11465597000
+Interval (617,656) (1,370) (1,2167) (2590,2864)
+8819690000
+Interval (593,616) (1,821) (1,810) (2590,2864)
+4389066000
+Interval (564,592) (1,821) (1,810) (2590,2709)
+2314234800
+Interval (709,789) (1,821) (1401,2167) (2590,2864)
+14026723425
+Interval (709,789) (1,821) (969,1400) (2590,2864)
+7900318800
+Interval (709,789) (1,354) (1,185) (2590,2864)
+1458789750
+Interval (709,789) (1,354) (186,345) (2590,2864)
+1261656000
+Interval (1,1489) (1762,3243) (1,1414) (2233,3298)
+3326208856152
+Interval (1,1489) (1762,2174) (1,2167) (3403,3568)
+221213561954
+Interval (1,755) (1762,2174) (777,2167) (3684,3748)
+28192753225
+Interval (1,755) (1762,2174) (777,1638) (3569,3683)
+30910220950
+Interval (342,755) (1762,2174) (1639,2167) (3569,3683)
+10401689970
+Interval (1,341) (1762,2174) (1639,2167) (3569,3683)
+8567575555
+Interval (756,1489) (1762,2174) (777,2167) (3569,3748)
+75900693960
+Interval (1,1489) (2502,2774) (1,2167) (3299,3563)
+233432934735
+Interval (974,1489) (2502,2774) (1,2167) (3564,3672)
+33273444204
+Interval (1,1489) (2175,2317) (954,2167) (3299,3748)
+116322020100
+Interval (1,1489) (2318,2501) (954,2167) (3299,3748)
+149673088800
+Interval (779,1489) (2775,3529) (1674,2167) (3299,4000)
+186157532340
+Interval (779,1218) (3530,4000) (1115,2167) (3299,4000)
+153193051440
+Interval (1,778) (3347,4000) (1324,1687) (3894,4000)
+19817209776
+Interval (1,778) (2775,4000) (1688,2167) (3910,4000)
+41663207040
+Interval (1,778) (2775,4000) (1688,2167) (3740,3909)
+77832364800
+Interval (1,1489) (3549,4000) (1,1114) (3534,3752)
+164195949048
+Interval (1,1489) (3549,3800) (1,1114) (3753,4000)
+103664990016
+Interval (518,898) (3801,4000) (1,1114) (3753,4000)
+21051926400
+Interval (1,517) (3801,4000) (447,1114) (3753,4000)
+17129657600
+Interval (1,1489) (3296,4000) (1,1114) (3299,3533)
+274812743550
+Interval (1,650) (2775,3295) (1,1114) (3299,3533)
+88655183500
+Interval (1283,1489) (2775,3010) (1,1114) (3438,3533)
+5224428288
+Interval (651,1078) (2775,3295) (1,1114) (3299,3420)
+30305853104
+Interval (651,1078) (2775,3295) (1,1114) (3421,3533)
+28070175416
+Interval (1490,2949) (2149,3013) (1110,2167) (1,2437)
+3256193163400
+Interval (1490,2949) (2149,3013) (1660,2167) (2438,4000)
+1002747651600
+Interval (2288,2949) (3014,4000) (1110,1537) (1,4000)
+1118610528000
+Interval (1490,2095) (3385,4000) (1538,2167) (1,4000)
+940705920000
+Interval (1490,2095) (3014,3384) (1829,2167) (1,4000)
+304864056000
+Interval (1490,2095) (3014,3384) (1538,1828) (1,4000)
+261697464000
+Interval (2571,2730) (1,2148) (1110,1643) (1,4000)
+734100480000
+Interval (2414,2570) (1,2148) (1110,1643) (1,1833)
+330094015992
+Interval (1490,1932) (1,924) (1110,2167) (1417,2290)
+378506025744
+Interval (1490,1736) (1,924) (1110,2167) (1,1416)
+341914757184
+Interval (2330,2413) (1,351) (1689,2167) (1,4000)
+56491344000
+Interval (2308,2413) (1,924) (1110,1688) (1,4000)
+226838304000
+Interval (2247,2283) (1,924) (1110,1688) (1,2360)
+46715850720
+Interval (2125,2246) (443,924) (1110,2167) (1,4000)
+248858528000
+Interval (1933,2246) (161,288) (1110,2167) (1,4000)
+170092544000
+Interval (1933,2246) (289,442) (1110,1546) (1,4000)
+84526288000
+Interval (2092,2246) (289,442) (1547,2167) (1,4000)
+59293080000
+Interval (1933,2091) (289,442) (1547,2167) (1,4000)
+60823224000
+Interval (1490,2413) (925,2148) (1797,2016) (2077,4000)
+478719521280
+Interval (1490,1850) (925,2148) (2017,2167) (2077,4000)
+128372096736
+Interval (2091,2413) (925,2148) (2017,2167) (2077,4000)
+114859244448
+Interval (1887,2413) (925,1357) (1110,1796) (2077,2777)
+109893819117
+Interval (1490,2413) (1826,2148) (1110,1796) (2077,4000)
+394490272176
+Interval (1490,2413) (1358,1825) (1110,1796) (2077,4000)
+571583428416
+Interval (1490,2413) (925,1141) (1110,2167) (1,451)
+95673996264
+Interval (1490,2413) (1088,1141) (1110,2167) (452,907)
+24072225408
+Interval (1753,1994) (1881,2148) (1110,1522) (1,2076)
+55606756128
+Interval (1759,1994) (1552,1880) (1110,2167) (1,1345)
+110488188440
+Interval (1995,2223) (1552,2148) (1110,2167) (1,2076)
+300277526904
+Interval (2224,2413) (1830,2148) (1110,2167) (1,2076)
+133124288880
+Interval (1490,2067) (1,4000) (1,1109) (1,1038)
+2661440304000
+Interval (1782,2360) (1,2530) (1,1109) (1039,2041)
+1629414452490
+Interval (1490,1861) (2531,4000) (1,462) (1039,2564)
+385528762080
+Interval (2057,2360) (2531,4000) (1,393) (1039,2564)
+268001979840
+Interval (1862,2056) (2531,3361) (516,1109) (1039,2564)
+146884717980
+Interval (1862,1952) (3362,4000) (1,1109) (1039,2564)
+98407529766
+Interval (1953,2056) (3362,4000) (1,1109) (1039,2564)
+112465748304
+Interval (2361,2639) (2107,2516) (647,1109) (2510,4000)
+78967191870
+Interval (2497,2521) (2517,4000) (1,1109) (3303,4000)
+28718442200
+Interval (2426,2496) (2517,4000) (1,1109) (2510,3173)
+77587520864
+Interval (2426,2496) (2517,4000) (1,1109) (3174,4000)
+96633855052
+Interval (2361,2425) (2517,3248) (374,1109) (2510,4000)
+52213150080
+Interval (2361,2391) (2517,3248) (1,373) (2510,4000)
+12619996956
+Interval (2763,2949) (1,4000) (1,1109) (2510,4000)
+1236832212000
+Interval (2640,2762) (1,4000) (1,209) (2510,4000)
+153316548000
+Interval (2640,2762) (1,4000) (210,540) (2510,4000)
+242812332000
+Interval (2361,2559) (1,4000) (1,652) (1549,2509)
+498751312000
+Interval (2361,2483) (1,4000) (957,1109) (1549,2509)
+72340236000
+Interval (2361,2483) (1,4000) (653,956) (1549,2509)
+143734848000
+Interval (2560,2949) (1,4000) (191,505) (1945,2509)
+277641000000
+Interval (2560,2949) (1,4000) (1,1109) (1549,1944)
+685095840000
+Interval (2361,2949) (1,4000) (1,687) (1085,1548)
+751017408000
+Interval (2706,2949) (1,4000) (1,687) (799,1084)
+191766432000
+Interval (2361,2949) (1,4000) (688,958) (799,1548)
+478857000000
+Interval (2361,2949) (1,4000) (610,1109) (1,424)
+499472000000
+Interval (2361,2420) (1,4000) (1,1109) (425,798)
+99543840000
+Interval (2514,2567) (1,4000) (528,1109) (698,798)
+12696912000
+Interval (2568,2949) (1,4000) (1,1109) (647,798)
+257571904000
+Interval (2568,2949) (1,4000) (1,406) (425,646)
+137721696000
+Interval (2950,4000) (1,935) (880,2167) (1,1686)
+2133967300080
+Interval (2950,3478) (1,935) (880,1442) (1687,2644)
+266772578710
+Interval (2950,4000) (1,935) (880,1670) (2645,4000)
+1054024000260
+Interval (2950,4000) (1,935) (1671,2167) (2645,4000)
+662262867420
+Interval (3237,3277) (936,1566) (880,2167) (1,4000)
+133287392000
+Interval (3278,3388) (936,1566) (880,2167) (1,4000)
+360851232000
+Interval (3841,4000) (936,2020) (880,1439) (1,4000)
+388864000000
+Interval (3766,3810) (936,2020) (880,2167) (1,4000)
+251546400000
+Interval (3811,3840) (936,2020) (1937,2167) (1,4000)
+30076200000
+Interval (3668,3765) (936,2020) (880,2167) (1,4000)
+547812160000
+Interval (2950,3516) (2021,4000) (1193,1675) (485,1040)
+301488097680
+Interval (3325,3516) (2021,4000) (1258,1573) (1041,2174)
+136228055040
+Interval (2950,3324) (2977,4000) (1258,1573) (1041,2174)
+137604096000
+Interval (2950,3516) (2021,4000) (1008,1257) (1676,2174)
+140051835000
+Interval (2950,3516) (2021,4000) (880,1007) (1676,1915)
+34488115200
+Interval (3517,3714) (3005,4000) (1595,2167) (585,1051)
+52771085928
+Interval (3517,4000) (3005,3485) (880,1444) (1,584)
+76816007840
+Interval (3517,4000) (3005,3485) (1445,2167) (1,265)
+44604082380
+Interval (3517,4000) (3005,3485) (1445,2167) (266,431)
+27940670472
+Interval (3517,4000) (3005,3485) (1445,2167) (432,584)
+25752545676
+Interval (3517,4000) (3668,3806) (880,2167) (341,584)
+21142963072
+Interval (3517,3741) (2021,4000) (880,2167) (1513,1704)
+110170368000
+Interval (3517,3741) (2021,4000) (880,2167) (1436,1512)
+44182908000
+Interval (3517,3741) (2021,4000) (880,2167) (1331,1435)
+60249420000
+Interval (3517,3741) (2021,4000) (880,1710) (1052,1330)
+103288729500
+Interval (3634,3741) (2021,4000) (1711,2167) (1052,1330)
+27265241520
+Interval (3517,3633) (2021,4000) (1711,2167) (1052,1330)
+29537344980
+Interval (3197,3625) (2021,4000) (880,1521) (2175,4000)
+995768270640
+Interval (2950,3196) (3165,4000) (880,1521) (2175,4000)
+242068919664
+Interval (2950,3625) (2021,3327) (1522,2167) (3018,3668)
+371565848472
+Interval (3261,3625) (2021,3327) (1522,2167) (3669,4000)
+102314939960
+Interval (2950,3625) (3328,4000) (1522,2167) (3018,3555)
+158116267504
+Interval (2950,3223) (3590,4000) (1522,2167) (3556,4000)
+32373146580
+Interval (3224,3625) (3590,4000) (1744,2167) (3556,4000)
+31174086960
+Interval (3224,3625) (3590,3853) (1522,1743) (3556,4000)
+10484385120
+Interval (2950,3625) (3328,3457) (1522,2167) (3556,4000)
+25262863600
+Interval (3357,3625) (2021,2307) (1867,2009) (2175,3017)
+9306744447
+Interval (3357,3625) (2021,2307) (2010,2167) (2175,3017)
+10282976382
+Interval (2950,3625) (2706,2983) (1867,2167) (2175,2542)
+20816408704
+Interval (2950,3625) (3181,3629) (2003,2167) (2175,3017)
+42218670780
+Interval (2950,3625) (3630,4000) (2003,2167) (2175,2525)
+14524850340
+Interval (2950,3208) (3630,4000) (2003,2167) (2526,3017)
+7800505020
+Interval (2950,3625) (3181,4000) (1867,2002) (2175,3017)
+63551679360
+Interval (3626,4000) (2021,2716) (1336,2167) (3267,4000)
+159389568000
+Interval (3626,4000) (2021,2393) (880,1335) (3267,4000)
+46816722000
+Interval (3626,4000) (2394,2716) (880,1335) (3267,4000)
+40541022000
+Interval (3626,4000) (2717,3352) (880,1690) (3267,4000)
+141972849000
+Interval (3626,3861) (2717,3352) (1691,2167) (3267,4000)
+52551311328
+Interval (3862,4000) (2717,3352) (1691,1865) (3267,4000)
+11355493800
+Interval (3626,4000) (3459,3620) (880,2167) (3267,4000)
+57432564000
+Interval (3840,4000) (2021,4000) (1650,2167) (2175,2580)
+67041984240
+Interval (3626,3839) (2021,4000) (1650,2167) (2175,2580)
+89111705760
+Interval (3764,4000) (2021,4000) (880,1649) (2716,3266)
+199092940200
+Interval (3626,3763) (2021,4000) (1437,1649) (2716,3266)
+32068266120
+Interval (2950,3316) (1,1217) (1,879) (1,1150)
+451485033150
+Interval (2950,3316) (1,2447) (348,879) (1151,2052)
+430941385336
+Interval (2950,3105) (2448,2999) (1,879) (1,838)
+63430271424
+Interval (3030,3093) (2448,2999) (1,879) (839,2052)
+37698720768
+Interval (2950,3029) (2448,2999) (354,879) (839,1612)
+17978595840
+Interval (3094,3316) (2448,2999) (1,879) (839,2052)
+131356480176
+Interval (2950,3316) (3000,4000) (1,879) (810,2052)
+401384082099
+Interval (2950,3316) (3000,4000) (1,879) (1,809)
+261238714737
+Interval (3317,3611) (1,4000) (432,879) (1047,1536)
+259033600000
+Interval (3317,4000) (1,4000) (186,534) (459,1046)
+561460032000
+Interval (3317,4000) (1,4000) (1,185) (1,1046)
+529443360000
+Interval (3586,4000) (2274,4000) (231,523) (2053,3024)
+204114717180
+Interval (3586,4000) (1347,1913) (231,523) (2053,3024)
+67013922780
+Interval (3586,3745) (1,831) (254,523) (2053,4000)
+69931641600
+Interval (3586,3745) (832,1346) (254,523) (2053,4000)
+43339104000
+Interval (3905,4000) (1,719) (254,523) (2053,4000)
+36303863040
+Interval (3586,4000) (1,1346) (1,253) (2053,3311)
+177925996930
+Interval (3586,4000) (468,1346) (1,253) (3450,3719)
+24918463350
+Interval (3586,4000) (843,1346) (121,253) (3720,4000)
+7816936680
+Interval (3827,4000) (843,1346) (1,120) (3720,4000)
+2957109120
+Interval (3230,3262) (1,1409) (1,523) (2053,3278)
+29813783406
+Interval (2950,3082) (1,1409) (1,523) (2053,4000)
+190920813188
+Interval (3091,3262) (1410,4000) (312,523) (2053,4000)
+184043580352
+Interval (3263,3446) (1,4000) (276,410) (2053,4000)
+193553280000
+Interval (3263,3446) (1657,4000) (411,451) (2053,4000)
+34446748928
+Interval (3263,3446) (1,4000) (499,523) (2053,4000)
+35843200000
+Interval (3328,3446) (2573,4000) (1,147) (2053,4000)
+48661047792
+Interval (3328,3446) (1,2572) (59,147) (2053,4000)
+53063621296
+Interval (3328,3446) (1808,4000) (231,275) (2818,4000)
+13892578245
+Interval (3328,3446) (1,1807) (148,275) (2053,4000)
+53617188352
+Interval (3284,3303) (1,4000) (147,275) (2053,4000)
+20103360000
+Interval (3284,3294) (1,4000) (1,146) (3234,4000)
+4927208000
+Interval (3304,3313) (1,4000) (1,275) (2053,3287)
+13585000000
+Interval (3508,3556) (1,4000) (1,523) (2949,4000)
+107838416000
+Interval (3508,3552) (1,4000) (1,523) (2053,2948)
+84349440000
+Interval (3553,3585) (1,4000) (1,259) (2053,2948)
+30632448000
+Interval (3447,3507) (1,4000) (1,234) (3187,4000)
+46476144000
+Interval (3479,3507) (2177,4000) (1,234) (2053,2535)
+5978411712
+Interval (3479,3507) (2177,4000) (1,135) (2536,3186)
+4648764960
+Interval (3479,3507) (2177,4000) (136,234) (2536,3186)
+3409094304
+Interval (3447,3478) (1,2200) (91,234) (2591,2939)
+3538022400
+Interval (3447,3507) (1,4000) (235,391) (2053,4000)
+74623984000
+Interval (3447,3507) (1,4000) (392,523) (2053,4000)
+62741184000
+Interval (2950,4000) (2130,2492) (677,796) (2831,4000)
+53564425200
+Interval (2950,4000) (1406,2129) (677,796) (2831,4000)
+106833729600
+Interval (2950,4000) (3406,4000) (742,796) (2053,4000)
+66999463300
+Interval (3480,4000) (1640,4000) (841,879) (2053,2820)
+36843386112
+Interval (3480,4000) (2660,4000) (797,840) (2053,4000)
+59883631632
+Interval (3480,3728) (1677,2659) (797,840) (2053,4000)
+20979469104
+Interval (3729,4000) (1677,2059) (797,840) (2053,4000)
+8929133312
+Interval (3729,4000) (2060,2659) (797,840) (2053,4000)
+13988198400
+Interval (3080,3160) (1,4000) (797,879) (2053,4000)
+52385616000
+Interval (3194,3218) (1,4000) (797,879) (3342,4000)
+5469700000
+Interval (3194,3218) (1,4000) (797,879) (2053,3341)
+10698700000
+Interval (3219,3479) (1,4000) (853,879) (2053,2880)
+23339664000
+Interval (3219,3479) (1,4000) (832,852) (2053,2880)
+18153072000
+Interval (3219,3479) (1,4000) (797,879) (2881,4000)
+97050240000
+Interval (2950,4000) (883,1502) (524,676) (3351,3588)
+23728090680
+Interval (2950,4000) (1,882) (524,605) (3351,3588)
+18090980712
+Interval (2950,4000) (1,882) (606,676) (3351,3588)
+15664141836
+Interval (3373,4000) (1,4000) (524,676) (3155,3350)
+75329856000
+Interval (2950,3372) (2018,4000) (524,676) (3155,3350)
+25154204292
+Interval (2950,3372) (1,2017) (524,623) (3155,3350)
+16722543600
+Interval (2950,4000) (2516,4000) (598,632) (3589,4000)
+22505798700
+Interval (2950,3588) (1,2515) (650,676) (3589,4000)
+17877213540
+Interval (2950,4000) (1,2515) (598,649) (3589,4000)
+56629309360
+Interval (3463,4000) (1,2065) (524,597) (3589,4000)
+33871253360
+Interval (3763,4000) (2066,4000) (524,597) (3589,4000)
+14040638640
+Interval (3463,3762) (2066,4000) (524,558) (3589,4000)
+8370810000
+Interval (3463,3762) (2066,4000) (559,597) (3589,4000)
+9327474000
+Interval (3218,3462) (1,1991) (562,597) (3589,4000)
+7234975440
+Interval (3218,3462) (1992,4000) (562,597) (3589,4000)
+7300384560
+Interval (2950,3439) (1,1601) (617,676) (2813,3154)
+16097734800
+Interval (2950,3439) (1,1601) (617,642) (2470,2812)
+6996081820
+Interval (2950,3439) (1,1601) (643,676) (2470,2812)
+9148722380
+Interval (3440,4000) (1,1601) (617,646) (2053,3154)
+29693202660
+Interval (2950,4000) (1602,2714) (617,649) (2763,3154)
+15132054168
+Interval (2950,4000) (1602,2714) (650,676) (2904,3154)
+7927483851
+Interval (2950,4000) (1602,2714) (650,676) (2763,2903)
+4453287741
+Interval (2950,4000) (2034,2714) (617,676) (2356,2762)
+17478151020
+Interval (2950,4000) (2034,2714) (617,639) (2053,2355)
+4987929339
+Interval (2950,4000) (2034,2714) (640,676) (2053,2355)
+8024060241
+Interval (2950,4000) (2715,4000) (635,646) (2053,2607)
+9001562760
+Interval (2950,4000) (2715,4000) (617,639) (3029,3154)
+3916896228
+Interval (2950,4000) (2715,4000) (617,639) (2907,2953)
+1461064466
+Interval (2950,4000) (3356,4000) (617,639) (2954,3028)
+1169368875
+Interval (2950,3456) (1,4000) (524,571) (2053,3154)
+107273088000
+Interval (2950,3111) (1,4000) (597,616) (2053,3154)
+14281920000
+Interval (3112,3220) (1,4000) (597,616) (2053,2486)
+3784480000
+Interval (3647,3679) (1,2597) (524,616) (2053,2719)
+5316118731
+Interval (3457,3600) (1,4000) (524,616) (2406,2472)
+3589056000
+Interval (3529,3600) (1,4000) (524,616) (2473,2600)
+3428352000
+Interval (3457,3600) (1,4000) (524,616) (2053,2274)
+11892096000
+Interval (3680,4000) (1,2471) (524,616) (2053,2337)
+21023527455
+Interval (3680,4000) (1,2471) (524,616) (2438,2544)
+7893043641
